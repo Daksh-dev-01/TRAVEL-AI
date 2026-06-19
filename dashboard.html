@@ -1,0 +1,215 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | TravelAI</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🌍 TravelAI
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+                <a href="dashboard.html">
+                    📊 Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="my-trips.html">
+                    ✈ My Trips
+                </a>
+            </li>
+
+            <li>
+                <a href="guide-marketplace.html">
+                    👨‍💼 Guides
+                </a>
+            </li>
+
+            <li>
+                <a href="profile.html">
+                    👤 Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    ⚙ Settings
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    🛟 Help & Support
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    🚪 Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <div class="top-bar">
+
+            <h1>
+                Dashboard
+            </h1>
+
+            <a
+                href="create-trip.html"
+                class="btn-primary"
+                style="text-decoration:none;"
+            >
+                + New Trip
+            </a>
+
+        </div>
+
+        <!-- WELCOME CARD -->
+
+        <section class="welcome-card">
+
+            <div>
+
+                <h2 id="welcomeText">
+                    Welcome Back
+                </h2>
+
+                <p>
+                    Continue planning your next adventure.
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <h3 id="countriesCount">
+                    0
+                </h3>
+
+                <p>
+                    Countries Explored
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="completedTripsCount">
+                    0
+                </h3>
+
+                <p>
+                    Trips Completed
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="moneySaved">
+                    ₹0
+                </h3>
+
+                <p>
+                    Money Saved
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- READINESS SCORE -->
+
+        <section class="readiness-card">
+
+            <div class="readiness-header">
+
+                <h2>
+                    Travel Readiness Score
+                </h2>
+
+                <span id="readinessValue">
+                    0%
+                </span>
+
+            </div>
+
+            <div class="progress">
+
+                <div
+                    class="progress-fill"
+                    id="readinessBar"
+                ></div>
+
+            </div>
+
+        </section>
+
+        <!-- UPCOMING TRIPS -->
+
+        <section>
+
+            <div class="section-header">
+
+                <h2>
+                    Upcoming Trips
+                </h2>
+
+                <a href="my-trips.html">
+                    View All
+                </a>
+
+            </div>
+
+            <div
+                id="upcomingTrips"
+                class="trip-grid"
+            >
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

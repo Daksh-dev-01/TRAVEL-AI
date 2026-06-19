@@ -1,0 +1,409 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Details | TravelAI</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/trip-details.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🌍 TravelAI
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    📊 Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="my-trips.html">
+                    ✈ My Trips
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    👨‍💼 Guides
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    👤 Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    ⚙ Settings
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    🛟 Help & Support
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    🚪 Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <div class="page-header">
+
+            <a href="my-trips.html" class="back-btn">
+                ← Back to Trips
+            </a>
+
+            <h1 id="tripTitle">
+                Loading Trip...
+            </h1>
+
+        </div>
+
+        <!-- TABS -->
+
+        <div class="tabs">
+
+            <button class="tab-btn active" data-tab="overview">
+                Overview
+            </button>
+
+            <button class="tab-btn" data-tab="itinerary">
+                Itinerary
+            </button>
+
+            <button class="tab-btn" data-tab="budget">
+                Budget
+            </button>
+
+            <button class="tab-btn" data-tab="guide">
+                Guide
+            </button>
+
+            <button class="tab-btn" data-tab="survival">
+                Survival Kit
+            </button>
+
+            <button class="tab-btn" data-tab="documents">
+                Documents
+            </button>
+
+        </div>
+
+        <!-- OVERVIEW -->
+
+        <section id="overview" class="tab-content active">
+
+            <div class="card">
+
+                <h2>Trip Overview</h2>
+
+                <div class="overview-grid">
+
+                    <div class="info-box">
+                        <h4>Destination</h4>
+                        <p id="overviewDestination">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Dates</h4>
+                        <p id="overviewDates">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Travelers</h4>
+                        <p id="overviewTravelers">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Budget</h4>
+                        <p id="overviewBudget">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Status</h4>
+                        <p id="overviewStatus">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>Readiness Score</h4>
+                        <p id="overviewReadiness">-</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ITINERARY -->
+
+        <section id="itinerary" class="tab-content">
+
+            <div class="card">
+
+                <div class="section-header">
+
+                    <h2>Day Wise Itinerary</h2>
+
+                    <button id="addActivityBtn" class="btn-primary">
+                        + Add Activity
+                    </button>
+
+                </div>
+
+                <div id="itineraryContainer">
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h2>Map Preview</h2>
+
+                <div class="map-placeholder">
+                    Interactive Map Placeholder
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <h2>AI Travel Updates</h2>
+
+                <div id="aiUpdates">
+
+                    <div class="alert-card">
+
+                        <h4>
+                            ⚠ Heavy crowd detected at Eiffel Tower
+                        </h4>
+
+                        <p>
+                            Suggested Alternative:
+                            Montparnasse Tower
+                        </p>
+
+                        <div class="alert-actions">
+
+                            <button class="accept-btn">
+                                Accept
+                            </button>
+
+                            <button class="reject-btn">
+                                Reject
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- BUDGET -->
+
+        <section id="budget" class="tab-content">
+
+            <div class="card">
+
+                <h2>Budget Breakdown</h2>
+
+                <div class="budget-grid">
+
+                    <div class="budget-box">
+                        Flights
+                        <span id="flightCost">₹0</span>
+                    </div>
+
+                    <div class="budget-box">
+                        Hotels
+                        <span id="hotelCost">₹0</span>
+                    </div>
+
+                    <div class="budget-box">
+                        Food
+                        <span id="foodCost">₹0</span>
+                    </div>
+
+                    <div class="budget-box">
+                        Activities
+                        <span id="activityCost">₹0</span>
+                    </div>
+
+                    <div class="budget-box">
+                        Transport
+                        <span id="transportCost">₹0</span>
+                    </div>
+
+                    <div class="budget-box total">
+                        Total
+                        <span id="totalCost">₹0</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GUIDE -->
+
+        <section id="guide" class="tab-content">
+
+            <div class="card">
+
+                <h2>Local Guide</h2>
+
+                <div class="guide-card">
+
+                    <img
+                        src="https://via.placeholder.com/120"
+                        alt="Guide"
+                        class="guide-photo"
+                    >
+
+                    <div>
+
+                        <h3 id="guideName">
+                            Jean Martin
+                        </h3>
+
+                        <p>
+                            Languages:
+                            English, French
+                        </p>
+
+                        <p>
+                            Rating:
+                            ⭐ 4.8
+                        </p>
+
+                        <p>
+                            Price:
+                            ₹8000/day
+                        </p>
+
+                        <p>
+                            Phone:
+                            +33 123456789
+                        </p>
+
+                        <button class="btn-primary">
+                            WhatsApp
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SURVIVAL KIT -->
+
+        <section id="survival" class="tab-content">
+
+            <div class="card">
+
+                <h2>Travel Survival Kit</h2>
+
+                <div class="overview-grid">
+
+                    <div class="info-box">
+                        Currency
+                        <p id="currencyInfo">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        Emergency Numbers
+                        <p id="emergencyInfo">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        Power Plug
+                        <p id="plugInfo">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        eSIM
+                        <p id="esimInfo">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        Transport Cards
+                        <p id="transportCardInfo">-</p>
+                    </div>
+
+                    <div class="info-box">
+                        Useful Apps
+                        <p id="appsInfo">-</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- DOCUMENTS -->
+
+        <section id="documents" class="tab-content">
+
+            <div class="card">
+
+                <h2>Travel Documents</h2>
+
+                <input type="file" id="documentUpload">
+
+                <br><br>
+
+                <div id="documentsList">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/trip-details.js"></script>
+
+</body>
+</html>

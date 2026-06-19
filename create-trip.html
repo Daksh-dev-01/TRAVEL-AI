@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Trip | TravelAI</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+.form-card{
+    background:white;
+    padding:30px;
+    border-radius:16px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.form-section{
+    margin-bottom:30px;
+}
+
+.form-section h3{
+    margin-bottom:15px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.form-grid input,
+.form-grid select{
+    padding:12px;
+    border:1px solid #e2e8f0;
+    border-radius:10px;
+}
+
+.checkbox-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+@media(max-width:900px){
+
+    .form-grid,
+    .checkbox-grid{
+        grid-template-columns:1fr;
+    }
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<aside class="sidebar">
+
+<div class="logo">
+🌍 TravelAI
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="dashboard.html">
+📊 Dashboard
+</a>
+</li>
+
+<li class="active">
+<a href="#">
+➕ Create Trip
+</a>
+</li>
+
+<li>
+<a href="my-trips.html">
+✈ My Trips
+</a>
+</li>
+
+</ul>
+
+</aside>
+
+<main class="main-content">
+
+<h1>Create New Trip</h1>
+
+<br>
+
+<form id="tripForm" class="form-card">
+
+<div class="form-section">
+
+<h3>A. Departure Information</h3>
+
+<div class="form-grid">
+
+<input type="text" id="homeCity" placeholder="Home City" required>
+
+<input type="text" id="departureAirport" placeholder="Departure Airport">
+
+<input type="text" id="railwayStation" placeholder="Railway Station">
+
+<input type="text" id="busStation" placeholder="Bus Station">
+
+<input type="text" id="customStart" placeholder="Custom Starting Point">
+
+</div>
+
+</div>
+
+<div class="form-section">
+
+<h3>B. Destination</h3>
+
+<div class="form-grid">
+
+<input type="text" id="country" placeholder="Country" required>
+
+<input type="text" id="cities" placeholder="Cities (Optional)">
+
+</div>
+
+</div>
+
+<div class="form-section">
+
+<h3>C. Dates</h3>
+
+<div class="form-grid">
+
+<input type="date" id="startDate" required>
+
+<input type="date" id="endDate" required>
+
+</div>
+
+</div>
+
+<div class="form-section">
+
+<h3>D. Budget</h3>
+
+<div class="form-grid">
+
+<select id="budgetType">
+
+<option>Economy</option>
+<option>Standard</option>
+<option>Luxury</option>
+<option>Custom</option>
+
+</select>
+
+<input
+type="number"
+id="customBudget"
+placeholder="Custom Amount"
+>
+
+</div>
+
+</div>
+
+<div class="form-section">
+
+<h3>E. Travelers</h3>
+
+<select id="travelers">
+
+<option>Solo</option>
+<option>Couple</option>
+<option>Family</option>
+<option>Friends</option>
+
+</select>
+
+</div>
+
+<div class="form-section">
+
+<h3>F. Interests</h3>
+
+<div class="checkbox-grid">
+
+<label><input type="checkbox" value="Adventure"> Adventure</label>
+
+<label><input type="checkbox" value="Food"> Food</label>
+
+<label><input type="checkbox" value="History"> History</label>
+
+<label><input type="checkbox" value="Nature"> Nature</label>
+
+<label><input type="checkbox" value="Shopping"> Shopping</label>
+
+<label><input type="checkbox" value="Photography"> Photography</label>
+
+<label><input type="checkbox" value="Nightlife"> Nightlife</label>
+
+<label><input type="checkbox" value="Museums"> Museums</label>
+
+</div>
+
+</div>
+
+<div class="form-section">
+
+<h3>G. Cuisine Preferences</h3>
+
+<select id="cuisine">
+
+<option>Vegetarian</option>
+<option selected>Eggetarian</option>
+<option>Vegan</option>
+<option>Halal</option>
+<option>Jain</option>
+<option>Non-vegetarian</option>
+
+</select>
+
+</div>
+
+<div class="form-section">
+
+<h3>H. Religion</h3>
+
+<input
+type="text"
+id="religion"
+placeholder="Optional"
+>
+
+</div>
+
+<div class="form-section">
+
+<h3>I. Accessibility</h3>
+
+<div class="checkbox-grid">
+
+<label>
+<input type="checkbox" value="Elderly-friendly">
+Elderly-friendly
+</label>
+
+<label>
+<input type="checkbox" value="Child-friendly">
+Child-friendly
+</label>
+
+<label>
+<input type="checkbox" value="Wheelchair support">
+Wheelchair support
+</label>
+
+</div>
+
+</div>
+
+<div class="form-section">
+
+<h3>J. Transport Preference</h3>
+
+<select id="transport">
+
+<option>Walking</option>
+<option>Public Transport</option>
+<option>Taxi</option>
+<option>Rental Vehicle</option>
+
+</select>
+
+</div>
+
+<div class="form-section">
+
+<label>
+
+<input type="checkbox" id="eco">
+
+ Eco-Friendly Travel
+
+</label>
+
+<br><br>
+
+<label>
+
+<input type="checkbox" id="guide">
+
+ Need Local Guide
+
+</label>
+
+</div>
+
+<button
+type="submit"
+class="btn-primary"
+>
+
+Analyze Trip
+
+</button>
+
+</form>
+
+</main>
+
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/create-trip.js"></script>
+
+</body>
+</html>

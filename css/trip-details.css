@@ -1,0 +1,212 @@
+
+.page-header{
+    margin-bottom:25px;
+}
+
+.back-btn{
+    text-decoration:none;
+    color:#2563eb;
+    display:inline-block;
+    margin-bottom:15px;
+}
+
+.tabs{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:25px;
+}
+
+.tab-btn{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#e2e8f0;
+    cursor:pointer;
+    font-weight:500;
+}
+
+.tab-btn.active{
+    background:#2563eb;
+    color:white;
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:16px;
+    margin-bottom:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.overview-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.info-box{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+}
+
+.info-box h4{
+    margin-bottom:10px;
+}
+
+.budget-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.budget-box{
+    background:#f8fafc;
+    padding:20px;
+    border-radius:12px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    font-weight:600;
+}
+
+.total{
+    background:#2563eb;
+    color:white;
+}
+
+.guide-card{
+    display:flex;
+    gap:25px;
+    align-items:center;
+}
+
+.guide-photo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.map-placeholder{
+    height:300px;
+    border-radius:12px;
+    background:#e2e8f0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:600;
+}
+
+.alert-card{
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    padding:20px;
+    border-radius:10px;
+}
+
+.alert-actions{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+}
+
+.accept-btn{
+    background:#16a34a;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.reject-btn{
+    background:#dc2626;
+    color:white;
+    border:none;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.day-card{
+    border:1px solid #e2e8f0;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.activity-row{
+    display:grid;
+    grid-template-columns:1fr 2fr 2fr auto;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.activity-row input{
+    padding:10px;
+    border:1px solid #e2e8f0;
+    border-radius:8px;
+}
+
+.delete-activity{
+    background:#dc2626;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:10px;
+    cursor:pointer;
+}
+
+#documentUpload{
+    width:100%;
+    padding:15px;
+    border:2px dashed #cbd5e1;
+    border-radius:12px;
+}
+
+.document-item{
+    background:#f8fafc;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:10px;
+}
+
+@media(max-width:900px){
+
+    .guide-card{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .activity-row{
+        grid-template-columns:1fr;
+    }
+
+    .tabs{
+        flex-direction:column;
+    }
+
+}
+
+.activity-row{
+    cursor:move;
+}
+
+.activity-row:active{
+    opacity:0.6;
+}
+
+.document-item button{
+    cursor:pointer;
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trips | TravelAI</title>
+
+    <link rel="stylesheet" href="css/dashboard.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            🌍 TravelAI
+        </div>
+
+        <ul class="menu">
+
+            <li>
+                <a href="dashboard.html">
+                    📊 Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="my-trips.html">
+                    ✈ My Trips
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    👨‍💼 Guides
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    👤 Profile
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    ⚙ Settings
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    🛟 Help & Support
+                </a>
+            </li>
+
+            <li>
+                <a href="#" id="logoutBtn">
+                    🚪 Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+        <div class="top-bar">
+
+            <h1>My Trips</h1>
+
+            <input
+                type="text"
+                id="searchTrips"
+                placeholder="Search destination..."
+                style="padding:10px;border:1px solid #e2e8f0;border-radius:10px;"
+            >
+
+        </div>
+
+        <!-- PLANNED -->
+
+        <section>
+
+            <h2 style="margin-bottom:20px;">
+                📅 Planned Trips
+            </h2>
+
+            <div
+                id="plannedTrips"
+                class="trip-grid"
+            ></div>
+
+        </section>
+
+        <br><br>
+
+        <!-- ONGOING -->
+
+        <section>
+
+            <h2 style="margin-bottom:20px;">
+                🚀 Ongoing Trips
+            </h2>
+
+            <div
+                id="ongoingTrips"
+                class="trip-grid"
+            ></div>
+
+        </section>
+
+        <br><br>
+
+        <!-- COMPLETED -->
+
+        <section>
+
+            <h2 style="margin-bottom:20px;">
+                ✅ Completed Trips
+            </h2>
+
+            <div
+                id="completedTrips"
+                class="trip-grid"
+            ></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/trips.js"></script>
+
+</body>
+</html>
